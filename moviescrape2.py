@@ -130,7 +130,7 @@ while True :
 	    try:
 		    title = movie.find('h2').contents[0]
 	    except:
-		    title = None
+		    continue
 
 	    try:
 		    org = movie.find('div', class_='filmPreview__originalTitle').contents[0]
