@@ -25,7 +25,7 @@ length INTEGER,
 genre TEXT,
 director TEXT,
 country TEXT,
-cast TEXT,
+people TEXT,
 short_info TEXT,
 rating REAL,
 rates_number INTEGER )''')
@@ -195,7 +195,7 @@ while True :
 	    except:
 		    cast = None
 
-	    cur.execute('''INSERT OR IGNORE INTO Movies (id,org_title, title, year, length, genre, director, country, cast, short_info, rating, rates_number)
+	    cur.execute('''INSERT OR IGNORE INTO Movies (id,org_title, title, year, length, genre, director, country, people, short_info, rating, rates_number)
 		    VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )''', (number,org, title, year, length, genre, director, countries, cast, description, rating, votes))
 
 	    conn.commit()
